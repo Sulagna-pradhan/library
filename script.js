@@ -37,6 +37,37 @@ function myFunction() {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all author card links
+  var authorLinks = document.querySelectorAll(".author-card-link");
+
+  // Attach click event to each author card link
+  authorLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      // Prevent the default link behavior
+      event.preventDefault();
+
+      // Get the author's data from the clicked card
+      var authorImage = link.querySelector("img").src;
+      var authorName = link.querySelector("h3").textContent;
+
+      // Redirect to the author's page with general overview
+      window.location.href = "author-overview.html?authorImage=" + encodeURIComponent(authorImage) + "&authorName=" + encodeURIComponent(authorName);
+    });
+  });
+
+  // Load More Button Click Event
+  var loadMoreBtn = document.getElementById("load-more-btn");
+  loadMoreBtn.addEventListener("click", function () {
+    // Redirect to the search page
+    window.location.href = "load-author.html";
+  });
+});
+
+
+
+
+
 
 
 
