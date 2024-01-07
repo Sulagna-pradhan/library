@@ -1,0 +1,23 @@
+<!-- Include navbar component -->
+<!-- Adjust the path based on the actual file structure -->
+<!-- You can also use a server-side include if you are using a server -->
+<div id="navbar-placeholder"></div>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
+</script>
+
+<!-- Content of your main HTML file goes here -->
+
+<!-- Include footer component -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>

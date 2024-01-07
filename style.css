@@ -1,12 +1,12 @@
 /*Codded by sulagna pradhan*/
 /* Importing Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -14,7 +14,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
+  background-color: #292929e0;
+  transition: all ease 0.5s;
+  z-index: 9;
 }
 
 header .navbar {
@@ -33,7 +36,7 @@ header .navbar {
 }
 
 .navbar .logo span {
-  color: #C06B3E;
+  color: #c06b3e;
 }
 
 .navbar .menu-links {
@@ -49,7 +52,17 @@ header .navbar {
 }
 
 .navbar a:hover {
-  color: #C06B3E;
+  color: #c06b3e;
+}
+
+.navbar .loginButton {
+  padding: 9px 13px;
+  background-color: blueviolet;
+  border-radius: 6px;
+}
+
+.navbar .loginButton:hover {
+  color: black;
 }
 
 .hero-section {
@@ -83,7 +96,8 @@ header .navbar {
 
 .hero-section .content button {
   background: #fff;
-  padding: 12px 30px;
+  background-color: #fff;
+  padding: 10px 20px;
   border: none;
   font-size: 1rem;
   border-radius: 6px;
@@ -92,10 +106,14 @@ header .navbar {
   font-weight: 500;
   transition: 0.2s ease;
 }
+.hero-section .content .searchbutton {
+  padding: 9px 9px;
+  margin-left: 5px;
+}
 
 .hero-section .content button:hover {
   color: #fff;
-  background: #C06B3E;
+  background: #c06b3e;
 }
 
 #close-menu-btn {
@@ -131,8 +149,8 @@ header .navbar {
     font-size: 1.7rem;
   }
 
-    
-  #hamburger-btn, #close-menu-btn {
+  #hamburger-btn,
+  #close-menu-btn {
     display: block;
   }
 
@@ -168,64 +186,113 @@ header .navbar {
     font-size: 2.3rem;
     line-height: 60px;
   }
-  
+
   .hero-section .content button {
     padding: 9px 18px;
   }
 }
 
+/* search box css */
+/* Basic styling for the input box */
+.input-box {
+  position: relative;
+  align-items: center;
+}
+
+/* Style for the search icon */
+.uil-search {
+  margin-right: 10px; /* Adjust margin as needed */
+  color: #333; /* Adjust the color as needed */
+}
+
+/* Style for the input field */
+.input-box input[type="text"] {
+  flex: 1;
+  outline: none;
+  position: relative;
+  max-width: 250px;
+  padding: 10px; /* Adjust padding as needed */
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Adjust the border color as needed */
+  border-radius: 5px; /* Adjust the border-radius as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 600px) {
+  .input-box {
+    flex-direction: column;
+  }
+
+  .uil-search {
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+  }
+
+  .searchbutton {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+  }
+}
+
+/* search box css */
+
 /* Dropdown Button */
 .dropbtn {
-    background-color: transparent;
-    color: blueviolet;
-    padding: 1px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
+  background-color: transparent;
+  color: blueviolet;
+  padding: 0 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 3px;
+}
 
-  .dropbtn a {
-    background: blueviolet;
-    color: rgb(226, 217, 217);
-    text-decoration: none;
-    transition: 0.2s ease;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #adb5bb;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:inline-block;}
+.dropbtn a {
+  background: blueviolet;
+  color: rgb(226, 217, 217);
+  text-decoration: none;
+}
 
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  color: #fff;
+  background-color: blueviolet;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: inline-block;
+}
 
 /* Updated CSS with glow effect for all cards */
 /*Codded by sulagna pradhan*/
@@ -332,13 +399,15 @@ header .navbar {
 
 .author-card img {
   width: 100%;
+  max-width: fit-content;
   height: auto;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
 }
 
 .author-card h3 {
-  font-size: 18px;
-  margin: 10px 0;
+  font-size: 15px;
+  font-display: 20px;
+  margin: 20px 0px;
 }
 
 /* Load More Button Styles */
@@ -378,7 +447,69 @@ header .navbar {
   }
 }
 
+/*CSS for New York bestselling*/
 
+.newyork-best-section {
+  background-color: #5b51e0;
+  padding: 50px 0;
+}
+
+.newyork-best-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newyork-best-section h2 {
+  text-align: center;
+  font-size: 2.1rem;
+  line-height: 3;
+  color: #333;
+}
+
+.newyork-best-section h3 {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #161414;
+  padding-bottom: 15px;
+}
+
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.book-card {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(155, 81, 224, 0.5); /* Glow effect added */
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.book-card h3 {
+  font-size: 1.1rem;
+  padding: 15px;
+}
+
+.book-card p {
+  font-size: 1rem;
+  padding: 0 15px 15px;
+  color: #777;
+}
 
 /*Codded by sulagna pradhan*/
 /*Codded by sulagna pradhan*/
@@ -400,7 +531,6 @@ header .navbar {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 
 .book-card:hover {
   transform: scale(1.05);
@@ -457,7 +587,6 @@ header .navbar {
 #see-more-btn:hover {
   background-color: #0056b3;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -554,7 +683,6 @@ header .navbar {
   }
 }
 
-
 /*Codded by sulagna pradhan*/
 /*Codded by sulagna pradhan*/
 /* Footer Styles */
@@ -578,7 +706,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #C06B3E;
+  color: #c06b3e;
 }
 
 .credit {
@@ -591,7 +719,7 @@ footer {
 }
 
 .credit a {
-  color: #C06B3E;
+  color: #c06b3e;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s ease;
