@@ -2,6 +2,19 @@ const header = document.querySelector("header");
 const hamburgerBtn = document.querySelector("#hamburger-btn");
 const closeMenuBtn = document.querySelector("#close-menu-btn");
 
+// for smooth scrolling
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 // Toggle mobile menu on hamburger button click
 hamburgerBtn.addEventListener("click", () =>
   header.classList.toggle("show-mobile-menu")
@@ -73,7 +86,7 @@ window.addEventListener("scroll", function () {
   if (scrollTop - lastScrollTop > 4 && scrollTop > lastScrollTop) {
     this.setTimeout(function () {
       scrollnavbar.style.top = "-81px";
-    }, 200);
+    }, 100);
     //set the value to the negetive of height of navbar
   } else if (scrollTop - lastScrollTop < -4 && scrollTop < lastScrollTop) {
     scrollnavbar.style.top = "0";

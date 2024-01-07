@@ -9,6 +9,19 @@
   font-family: "Poppins", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #e5caff9c; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #7f13e5; /* color of the scroll thumb */
+  border-radius: 6px; /* roundness of the scroll thumb */ /* creates padding around scroll thumb */
+}
+
 header {
   position: fixed;
   top: 0;

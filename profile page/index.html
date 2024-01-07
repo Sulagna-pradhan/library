@@ -14,7 +14,7 @@
       body {
         height: 100%;
         width: 100%;
-        background-image: url(https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-image: url("https://c4.wallpaperflare.com/wallpaper/533/461/230/purple-shade-gradation-blur-wallpaper-preview.jpg");
         background-size: cover;
         background-position: center;
         display: flex;
@@ -29,7 +29,7 @@
         /* background-color: rgb(182, 95, 223); */
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
         background-color: #4c4c4c2b;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(7px);
         border-radius: 10px;
       }
 
@@ -56,31 +56,54 @@
       .delete-buttons {
         margin-top: 20px;
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
+        justify-content: space-between;
       }
 
       .upload-buttons button {
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
+        border: none;
         border-radius: 5px;
         background-color: #4caf50;
         color: #fff;
         cursor: pointer;
+        transition: all ease 0.3s;
+      }
+      .upload-buttons button:hover {
+        scale: 1.02;
+        background-color: #358d38;
       }
       .delete-buttons button {
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
+        border: none;
         border-radius: 5px;
-        background-color: #e23131;
+        background-color: #ff142c;
         color: #fff;
         cursor: pointer;
+        transition: all ease 0.3s;
+      }
+      .delete-buttons button:nth-last-child(1) {
+        background-color: #db3647;
+      }
+      .delete-buttons button:hover {
+        scale: 0.95;
+        background-color: #830512;
       }
 
       .back-to-home {
         margin-top: 20px;
-        color: #fff;
+        text-align: center;
+      }
+      .back-to-home a {
+        text-decoration: none;
+        color: #2ba2ec;
+      }
+      @media (max-width: 600px) {
+        .profile-container {
+          width: 95%;
+        }
       }
     </style>
     <title>User Profile</title>
@@ -90,9 +113,9 @@
       <h1>User Profile</h1>
 
       <div class="user-info">
-        <p>Name: -</p>
+        <p>Name: - Toufique Al Ajay</p>
         <!-- Replace with the user's actual name -->
-        <p>Email: -</p>
+        <p>Email: - toufique26ajay@gmail.com</p>
         <!-- Replace with the user's actual email -->
       </div>
 
@@ -100,8 +123,8 @@
         <button onclick="location.href='upload.html'">Upload Books</button>
       </div>
       <div class="delete-buttons">
-        <button onclick="location.href='#'">Delete Your Account</button>
         <button onclick="location.href='#'">Log Out</button>
+        <button onclick="location.href='#'">Delete Your Account</button>
       </div>
 
       <div class="back-to-home">

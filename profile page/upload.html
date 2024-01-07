@@ -1,128 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: rgb(152, 54, 197);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f8ff;
+      }
 
-    .profile-container {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: rgb(182, 95, 223);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+      .upload-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #7e4ede;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
 
-    h1, h2, h3 {
-      color: #fff;
-    }
-    label{
+      h1,
+      h2,
+      h3 {
         color: #fff;
-    }
+      }
+      label {
+        color: #fff;
+      }
 
-    .upload-section {
-      margin-top: 20px;
-    }
+      .upload-section {
+        margin-top: 20px;
+      }
 
-    form {
-      display: flex;
-      flex-direction: column;
-    }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
 
-    label {
-      margin-top: 10px;
-    }
+      label {
+        margin-top: 10px;
+      }
 
-    input, select, textarea, button {
-      margin-top: 5px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+      input,
+      select,
+      textarea,
+      button {
+        margin-top: 5px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
 
-    button {
-      background-color: #4caf50;
-      color: #fff;
-      cursor: pointer;
-    }
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+      }
 
-    .thanks-message {
-      margin-top: 20px;
-      color: white;
-    }
+      .thanks-message {
+        margin-top: 20px;
+        color: white;
+      }
 
-    .book-cards-container {
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      grid-gap: 20px;
-    }
+      .book-cards-container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+      }
 
-    .book-card {
-      padding: 15px;
-      background-color: #fff;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
+      .book-card {
+        padding: 15px;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
 
-    .book-card h3 {
-      color: #333;
-    }
+      .book-card h3 {
+        color: #333;
+      }
 
-    .book-card p {
-      margin: 10px 0;
-      color: #666;
-    }
-  </style>
-  <title>User Profile</title>
-</head>
-<body>
-  <div class="profile-container">
-    <h1>Did you want to contribute something? 😃</h1>
+      .book-card p {
+        margin: 10px 0;
+        color: #666;
+      }
+      @media (max-width: 768px) {
+        .upload-container {
+          width: 85%;
+        }
+      }
+    </style>
+    <title>User Profile</title>
+  </head>
+  <body>
+    <div class="upload-container">
+      <h1>Did you want to contribute something? 😃</h1>
 
-    <div class="upload-section">
-      <h3>Ok! let's Upload some PDF</h3>
-      <form action="#" method="post" enctype="multipart/form-data">
-        <label for="genre">Choose Genre:</label>
-        <select id="genre" name="genre">
-          <option value="science">Science</option>
-          <option value="fiction">Fiction</option>
-          <option value="detective">Detective</option>
-          <option value="comics">Comics</option>
-          <!-- Add more genres as needed -->
-        </select>
+      <div class="upload-section">
+        <h3>Ok! let's Upload some PDF</h3>
+        <form action="#" method="post" enctype="multipart/form-data">
+          <label for="genre">Choose Genre:</label>
+          <select id="genre" name="genre">
+            <option value="science">Science</option>
+            <option value="fiction">Fiction</option>
+            <option value="detective">Detective</option>
+            <option value="comics">Comics</option>
+            <!-- Add more genres as needed -->
+          </select>
 
-        <label for="pdfName">PDF Name:</label>
-        <input type="text" id="pdfName" name="pdfName" required>
+          <label for="pdfName">PDF Name:</label>
+          <input type="text" id="pdfName" name="pdfName" required />
 
-        <label for="pdfDescription">PDF Description:</label>
-        <textarea id="pdfDescription" name="pdfDescription" rows="4" required></textarea>
+          <label for="pdfDescription">PDF Description:</label>
+          <textarea
+            id="pdfDescription"
+            name="pdfDescription"
+            rows="4"
+            required
+          ></textarea>
 
-        <label for="pdfFile">Select PDF:</label>
-        <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
+          <label for="pdfFile">Select PDF:</label>
+          <input
+            type="file"
+            id="pdfFile"
+            name="pdfFile"
+            accept=".pdf"
+            required
+          />
 
-        <button type="submit">Upload</button>
-      </form>
-    </div>
+          <label for="pdfFile">Select Cover Page:</label>
+          <input
+            type="file"
+            id="pdfFile"
+            name="pdfFile"
+            accept="image/*"
+            required
+          />
 
-    <p class="thanks-message">Thanks for your contribution!</p>
+          <button type="submit">Upload</button>
+        </form>
+      </div>
 
-    <div class="book-cards-container">
-      <!-- Book cards will be dynamically added here when users upload PDFs -->
-      <!-- Example Card:
+      <p class="thanks-message">Thanks for your contribution!</p>
+
+      <div class="book-cards-container">
+        <!-- Book cards will be dynamically added here when users upload PDFs -->
+        <!-- Example Card:
       <div class="book-card">
         <h3>Book Title</h3>
         <p>Genre: Science</p>
         <p>Description: Lorem ipsum dolor sit amet...</p>
       </div>
-      -->
+      --></div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
