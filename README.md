@@ -8,6 +8,7 @@ Features:-
 - **Genres Dropdown**: Users can explore books by different genres through an easy-to-use dropdown menu.
 - **Editor's Choice**: Featured books that are popular and loved by readers.
 - **Top Authors**: Showcase of top authors with clickable links to their profiles.
+- **New York best selling books**: A section where all new york best selling books is showing.
 - **Trending Books**: A section highlighting trending books with links to each book.
 - **Books Series**: Explore famous book series with images and a "See All Series" button.
 - **About Us**: Learn more about PlayLand E-Library with a dedicated section.
